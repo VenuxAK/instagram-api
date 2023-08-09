@@ -53,4 +53,9 @@ class User extends Authenticatable
             set: fn(String $value) => Hash::make($value)
         );
     }
+
+    public function feeds()
+    {
+        return $this->hasMany(Feed::class);
+    }
 }
